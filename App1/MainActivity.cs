@@ -118,13 +118,11 @@ namespace App1
         private void AddButtonValues(string value)
         {
             int index = @operator == null ? 0 : 1;
-            if (value == "," && numbers[index].Contains(","))
+            if (value == "." && numbers[index].Contains("."))
                 return;
             numbers[index] += value;
-            if ((numbers[0].StartsWith("0")&& numbers[0].Length>1))
-            {
+            if ((numbers[0].StartsWith("0")) && (numbers[0].Length > 1)&& (numbers[0][1] != '.'))
                 numbers[0] = numbers[0].Substring(1);
-            }
             UpdateCalculatorText();
         }
 
