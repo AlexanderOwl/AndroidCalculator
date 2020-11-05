@@ -62,8 +62,7 @@ namespace App1
         {
             numbers[0] = "0";
             numbers[1] = null;
-            @operator = null;
-            
+            @operator = null;            
             UpdateCalculatorText();
         }
 
