@@ -86,11 +86,12 @@ namespace App1
                 case "÷":
                     {
                         result = first / second;
+
                         break;
                     }
                 case "%":
                     {
-                        result = first / second;
+                        result = first / second;///////////
                         break;
                     }                   
             }
