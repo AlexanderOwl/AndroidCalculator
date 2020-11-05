@@ -121,6 +121,10 @@ namespace App1
             if (value == "," && numbers[index].Contains(","))
                 return;
             numbers[index] += value;
+            if ((numbers[0].StartsWith("0")&& numbers[0].Length>1))
+            {
+                numbers[0] = numbers[0].Substring(1);
+            }
             UpdateCalculatorText();
         }
 
