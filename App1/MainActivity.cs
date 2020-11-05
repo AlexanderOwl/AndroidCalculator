@@ -22,6 +22,7 @@ namespace App1
             SetContentView(Resource.Layout.activity_main);
 
             calcText = FindViewById<TextView>(Resource.Id.input);
+            
             numbers[0] = "0";
 
         }
@@ -56,6 +57,7 @@ namespace App1
             numbers[0] = "0";
             numbers[1] = null;
             @operator = null;
+            
             UpdateCalculatorText();
         }
 
