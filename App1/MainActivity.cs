@@ -14,6 +14,7 @@ namespace App1
         private TextView calcText;
         private string[] numbers = new string[2];
         private string @operator;
+        public char divider = System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0];
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -38,8 +39,13 @@ namespace App1
         public void ButtonClick(View view)
         {
             Button button = (Button)view;
-            if ("0123456789,".Contains(button.Text))
+            if ("0123456789".Contains(button.Text))
                 AddButtonValues(button.Text);
+            else if(",".Contains(button.Text))
+            {
+                
+               AddButtonValues(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0].ToString());
+            }
             else if ("×÷+-%±".Contains(button.Text))
             {
                 AddOperator(button.Text);
@@ -117,12 +123,18 @@ namespace App1
 
         private void AddButtonValues(string value)
         {
+
             int index = @operator == null ? 0 : 1;
-            if (value == "." && numbers[index].Contains("."))
+           
+            if (value == divider.ToString() && numbers[index].Contains(divider))
                 return;
+
             numbers[index] += value;
-            if ((numbers[0].StartsWith("0")) && (numbers[0].Length > 1)&& (numbers[0][1] != '.'))
+
+            if ((numbers[0].StartsWith("0")) && (numbers[0].Length > 1) && numbers[0][1]!= divider)
                 numbers[0] = numbers[0].Substring(1);
+
+           
             UpdateCalculatorText();
         }
 

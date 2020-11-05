@@ -113,7 +113,7 @@
             app:layout_columnSpan="2"/>
         <Button
             style="@style/AppTheme"
-            android:text="."
+            android:text=","
             app:layout_columnSpan="1"/>
 
         <Button
