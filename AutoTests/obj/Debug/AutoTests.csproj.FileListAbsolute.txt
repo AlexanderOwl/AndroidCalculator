@@ -1,0 +1,5 @@
+D:\Proga\Courses\AndroidCalculator_v3\AutoTests\bin\Debug\AutoTests.dll
+D:\Proga\Courses\AndroidCalculator_v3\AutoTests\bin\Debug\AutoTests.pdb
+D:\Proga\Courses\AndroidCalculator_v3\AutoTests\obj\Debug\AutoTests.csproj.CoreCompileInputs.cache
+D:\Proga\Courses\AndroidCalculator_v3\AutoTests\obj\Debug\AutoTests.dll
+D:\Proga\Courses\AndroidCalculator_v3\AutoTests\obj\Debug\AutoTests.pdb

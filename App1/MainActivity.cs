@@ -6,7 +6,7 @@ using Android.Widget;
 using Android.Views;
 using System;
 
-namespace App1
+namespace Calculator
 {
     [Activity(Label = "@string/app_name", Theme = "@android:style/Theme.DeviceDefault.NoActionBar", MainLauncher = true)]
     public class MainActivity : Activity

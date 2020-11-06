@@ -1,0 +1,10 @@
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\build.props
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\adb.props
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\App1.csprojAssemblyReference.cache
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res.flag
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\R.txt
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\R.cs.flag
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\App1.csproj.CoreCompileInputs.cache
