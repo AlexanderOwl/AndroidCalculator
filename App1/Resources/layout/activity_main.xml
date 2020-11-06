@@ -38,10 +38,9 @@
             android:text="AC"
             app:layout_columnSpan="1"/>
         <Button
-            style="@style/AppTheme"
-           
+            style="@style/AppTheme"           
             app:layout_columnSpan="1"
-            android:text="+/-"/>
+            android:text="±"/>
         <Button
             style="@style/AppTheme"
             

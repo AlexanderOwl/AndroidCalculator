@@ -6,8 +6,8 @@ Given Start app
 
 @add
 Scenario Outline: Add two numbers
-	When the two numbers  first and second are added
-	Then the result should be result
+	When the two numbers  <first> and <second> are added
+	Then the result should be <result>
 
 @integer	
 	Examples: 
@@ -35,8 +35,8 @@ Scenario Outline: Add two numbers
 
 @minus
 Scenario Outline: Subtracting two numbers
-	When Subtract number second from  first number 
-	Then the result should be result
+	When Subtract number <second> from  <first> number 
+	Then the result should be <result>
 
 @integer	
 	Examples: 
@@ -66,8 +66,8 @@ Scenario Outline: Subtracting two numbers
 	
  @multy
 Scenario Outline: Multiply two numbers
-	When Multiply numbers first by  number second
-	Then the result should be result
+	When Multiply numbers <first> by  number <second>
+	Then the result should be <result>
 
 	@integer	
 	Examples: 
@@ -95,7 +95,7 @@ Scenario Outline: Multiply two numbers
 	  @divide
 Scenario Outline: Divide two numbers
 	When Divide number <first> by  number <second> 
-	Then the result should be result
+	Then the result should be <result>
 
 	@integer	
 	Examples: 

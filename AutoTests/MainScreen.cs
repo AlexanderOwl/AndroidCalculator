@@ -1,4 +1,5 @@
-﻿using Xamarin.UITest;
+﻿using System;
+using Xamarin.UITest;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 namespace AutoTests
@@ -21,9 +22,11 @@ namespace AutoTests
         public Query btnComma = x => x.Marked(",");
         public Query btnPlus = x => x.Marked("+");
         public Query btnMinus = x => x.Marked("-");
-        public Query btnMultiply = x => x.Marked("*");
-        public Query btnDivide = x => x.Marked("/");
+        public Query btnMultiply = x => x.Marked("×");
+        public Query btnDivide = x => x.Marked("÷");
         public Query btnEqual = x => x.Marked("=");
+        public Query btnPercent = x => x.Marked("%");
+        public Query btnPlusMinus = x => x.Marked("±");
         public static IApp App => AppInitializer.App;
 
         public static void Repl()
@@ -112,7 +115,7 @@ namespace AutoTests
             return this;
         }
 
-        public MainScreen TapOnMultply()
+        public MainScreen TapOnMultiply()
         {
             App.Tap(btnMultiply);
             return this;
@@ -133,6 +136,18 @@ namespace AutoTests
         public MainScreen TapOnEquals()
         {
             App.Tap(btnEqual);
+            return this;
+        }
+
+        public MainScreen TapOnPercent()
+        {
+            App.Tap(btnPercent);
+            return this;
+        }
+
+        public MainScreen TapOnPlusMinus()
+        {
+            App.Tap(btnPlusMinus);
             return this;
         }
 

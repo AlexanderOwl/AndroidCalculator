@@ -15,7 +15,7 @@ namespace Calculator
         private TextView calcText;
         private string[] numbers = new string[2];
         private string @operator;
-        public char divider = System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0];
+        private char separator = System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0];
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -45,10 +45,29 @@ namespace Calculator
                 
                AddButtonValues(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0].ToString());
             }
-            else if ("×÷+-%±".Contains(button.Text))
+            else if ("×÷+-".Contains(button.Text))
             {
                 AddOperator(button.Text);
             }
+            else if ("±".Contains(button.Text))
+            {
+                Calculate();                
+                numbers[0] = (double.Parse(numbers[0]) * -1).ToString();
+                UpdateCalculatorText();
+            }
+            else if ("%".Contains(button.Text))
+            {
+                if (numbers[1] == null)
+                {
+                    numbers[0] = (double.Parse(numbers[0]) /100).ToString();
+                    UpdateCalculatorText();
+                }
+                else if (numbers[1] != null)
+                {
+                    numbers[1] = (double.Parse(numbers[1]) / 100 * double.Parse(numbers[0])).ToString();
+                    Calculate();
+                }
+            }           
             else if ("=" == button.Text)
             {
                 Calculate();
@@ -92,12 +111,7 @@ namespace Calculator
                         result = first / second;
 
                         break;
-                    }
-                case "%":
-                    {
-                        result = first / second;///////////
-                        break;
-                    }                   
+                    }                             
             }
             if (result != null)
             {
@@ -124,15 +138,12 @@ namespace Calculator
 
             int index = @operator == null ? 0 : 1;
            
-            if (value == divider.ToString() && numbers[index].Contains(divider))
+            if (value == separator.ToString() && numbers[index].Contains(separator))
                 return;
 
             numbers[index] += value;
 
-            if ((numbers[0].StartsWith("0")) && (numbers[0].Length > 1) && numbers[0][1]!= divider)
-                numbers[0] = numbers[0].Substring(1);
-
-           
+            if ((numbers[0].StartsWith("0")) && (numbers[0].Length > 1) && numbers[0][1]!= separator) numbers[0] = numbers[0].Substring(1);
             UpdateCalculatorText();
         }
 

@@ -8,7 +8,7 @@ namespace AutoTests
     public class FunctionsSteps
     {
         MainScreen _mainScreen = new MainScreen();
-
+        private char separator = System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0];
 
         [Given(@"Start app")]
         public void GivenStartApp()
@@ -29,8 +29,8 @@ namespace AutoTests
         [Then(@"the result should be (.*)")]
         public void ThenTheResultShouldBe(string exectedResult)
         {
-            exectedResult = exectedResult.Replace("\"", "");
-            Assert.AreEqual(exectedResult, _mainScreen.GetTextFromField());
+            double result = double.Parse(exectedResult.Replace('.', separator).Replace(',', separator));
+            Assert.AreEqual(result, double.Parse(_mainScreen.GetTextFromField()));
         }
 
 
@@ -49,7 +49,7 @@ namespace AutoTests
         public void WhenMultiplyNumbersByNumber(string first, string second)
         {
             GetArrey(first);
-            _mainScreen.TapOnMultply();
+            _mainScreen.TapOnMultiply();
             GetArrey(second);
             _mainScreen.TapOnEquals();
         }
@@ -99,6 +99,18 @@ namespace AutoTests
                     break;
                 case '+':
                     _mainScreen.TapOnPlus();
+                    break;
+                case '×':
+                    _mainScreen.TapOnMultiply();//
+                    break;
+                case '÷':
+                    _mainScreen.TapOnDivide();
+                    break;
+                case '%':
+                    _mainScreen.TapOnPercent();
+                    break;
+                case '±':
+                    _mainScreen.TapOnPlusMinus();
                     break;
             }
         }
