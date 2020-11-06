@@ -43,6 +43,14 @@ namespace AutoTests
             _mainScreen.TapOnEquals();
         }
 
+        [When(@"Divide number (.*) by  number (.*)")]
+        public void WhenDivideNumberByNumber(string first, string second)
+        {
+            GetArrey(first);
+            _mainScreen.TapOnDivide();
+            GetArrey(second);
+            _mainScreen.TapOnEquals();
+        }
 
 
         [When(@"Multiply numbers (.*) by  number (.*)")]

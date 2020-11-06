@@ -327,7 +327,7 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Divide two numbers")]
         [NUnit.Framework.CategoryAttribute("divide")]
-        [NUnit.Framework.TestCaseAttribute("0", "0", "0", new string[] {
+        [NUnit.Framework.TestCaseAttribute("0", "0", "NaN", new string[] {
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("0", "4", "0", new string[] {
                 "integer"}, Category="integer")]
@@ -339,17 +339,17 @@ this.FeatureBackground();
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("1", "3", "0,33333333333333", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("6", "-2", "-3", new string[] {
+        [NUnit.Framework.TestCaseAttribute("6", "±2", "-3", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("-6", "-3", "2", new string[] {
+        [NUnit.Framework.TestCaseAttribute("-6", "±3", "2", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("-10", "2", "5", new string[] {
+        [NUnit.Framework.TestCaseAttribute("-10", "2", "-5", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("6", "1,5", "2", new string[] {
+        [NUnit.Framework.TestCaseAttribute("6", "1,5", "4", new string[] {
                 "double"}, Category="double")]
         [NUnit.Framework.TestCaseAttribute("5,5", "5", "1,1", new string[] {
                 "double"}, Category="double")]
-        [NUnit.Framework.TestCaseAttribute("4", "0,3", "1,33333333333333", new string[] {
+        [NUnit.Framework.TestCaseAttribute("4", "0,3", "13,3333333333333", new string[] {
                 "double"}, Category="double")]
         [NUnit.Framework.TestCaseAttribute("0,3", "3", "0,1", new string[] {
                 "double"}, Category="double")]
