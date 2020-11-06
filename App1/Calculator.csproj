@@ -77,21 +77,11 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpecflowTests\AppInitializer.cs" />
-    <Compile Include="SpecflowTests\FeatureFiles\Functions.feature.cs" />
-    <Compile Include="SpecflowTests\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="SpecflowTests\Properties\AssemblyInfo.cs" />
-    <Compile Include="SpecflowTests\Screens\MainScreen.cs" />
-    <Compile Include="SpecflowTests\Steps\FunctionsSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <None Include="SpecflowTests\FeatureFiles\Functions.feature" />
-    <None Include="SpecflowTests\obj\Debug\SpecflowTests.csprojAssemblyReference.cache" />
-    <None Include="SpecflowTests\packages.config" />
-    <None Include="SpecflowTests\SpecflowTests.csproj" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_main.xml">
@@ -137,10 +127,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\mybutton.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SpecflowTests\bin\Debug\" />
-    <Folder Include="SpecflowTests\obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Widget;
 using Android.Views;
 using System;
+using App1;
 
 namespace Calculator
 {
@@ -21,9 +22,7 @@ namespace Calculator
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-
-            calcText = FindViewById<TextView>(Resource.Id.input);
-            
+            calcText = FindViewById<TextView>(Resource.Id.input);            
             numbers[0] = "0";
 
         }

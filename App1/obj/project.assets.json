@@ -1531,9 +1531,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proga\\Courses\\AndroidCalculator_v3\\App1\\App1.csproj",
-      "projectName": "App1",
-      "projectPath": "D:\\Proga\\Courses\\AndroidCalculator_v3\\App1\\App1.csproj",
+      "projectUniqueName": "D:\\Proga\\Courses\\AndroidCalculator_v3\\App1\\Calculator.csproj",
+      "projectName": "Calculator",
+      "projectPath": "D:\\Proga\\Courses\\AndroidCalculator_v3\\App1\\Calculator.csproj",
       "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
       "outputPath": "D:\\Proga\\Courses\\AndroidCalculator_v3\\App1\\obj\\",
       "projectStyle": "PackageReference",
