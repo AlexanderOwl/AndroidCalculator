@@ -164,3 +164,4 @@ D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\stamp\_ConvertResource
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\stamp\_GenerateJavaStubs.stamp
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\Calculator.csprojAssemblyReference.cache
