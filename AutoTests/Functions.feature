@@ -35,7 +35,7 @@ Scenario Outline: Add two numbers
 
 @minus
 Scenario Outline: Subtracting two numbers
-	When Subtract number <second> from  <first> number 
+	When Subtract number <first> from  <second> number 
 	Then the result should be <result>
 
 @integer	
@@ -48,10 +48,8 @@ Scenario Outline: Subtracting two numbers
 	 |   5   |   8    |  -3    |
 	 |   6   |   6    |   0    |
  	 |  50   |   5    |  45    | 
-	 |  -5   |   4    |  -9    |
-	 |   3   |  -2    |   5    |
-     |  -7   |  -1    |   6    |
-     |  -1   |  -1    |   0    |
+	 |  5±   |   4    |  -9    |
+	 
 
 @double	
 	Examples: 
@@ -61,7 +59,7 @@ Scenario Outline: Subtracting two numbers
 	 |   4    |   0,4  |  3,6   |
 	 |   0,1  |   3    | -2,9   |	
 	 |   0,03 |   3    | -2,97  |
-	 |   2    |   2,01 |  0,01  |
+	 
 
 	
  @multy
@@ -78,8 +76,8 @@ Scenario Outline: Multiply two numbers
 	 |   5   |   4    |  20    |
  	 |  10   |   5    |  50    | 
 	 |  -6   |   4    | -24    |
-	 |   3   |  -2    |  -6    |
-     |  -7   |  -1    |   7    |
+	 |   3   |  ±2    |  -6    |
+     |  -7   |  ±1    |   7    |
    
 
    @double	
@@ -96,21 +94,17 @@ Scenario Outline: Multiply two numbers
 Scenario Outline: Divide two numbers
 	When Divide number <first> by  number <second> 
 	Then the result should be <result>
-
 	@integer	
 	Examples: 
 	 | first | second | result |
 	 |   0   |   0    |   NaN    |
-	 |   0   |   4    |   0    |
-	 |   5   |   0    |   0    |
+	 |   0   |   4    |   0    |	 
 	 |   5   |   5    |   1    |
  	 |   1   |   5    |   0,2  | 
-	 |   1   |   3    |   0,33333333333333   |
+	 |   1   |   3    |   0,333333333333333   |
 	 |   6   |  ±2    |  -3    |
      |  -6   |  ±3    |   2    |
 	 |  -10   |  2    |   -5    |
-
-
 	    @double	
 	Examples: 
 	 | first  | second | result |
@@ -120,3 +114,4 @@ Scenario Outline: Divide two numbers
 	 |   0,3  |   3    |  0,1   |	
 	 |   0,03 |   3    |  0,01  |
 	 |   4,02 |   2,01 |  2     |
+

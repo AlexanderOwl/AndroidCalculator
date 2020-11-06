@@ -99,6 +99,7 @@ namespace Calculator
                 case "-":
                     {
                         result = first - second;
+
                         break;
                     }
                 case "×":

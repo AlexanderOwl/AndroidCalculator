@@ -179,13 +179,13 @@ this.FeatureBackground();
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("50", "5", "45", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("-5", "4", "-9", new string[] {
+        [NUnit.Framework.TestCaseAttribute("5±", "4", "-9", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("3", "-2", "5", new string[] {
+        [NUnit.Framework.TestCaseAttribute("3", "±2", "5", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("-7", "-1", "6", new string[] {
+        [NUnit.Framework.TestCaseAttribute("±7", "±1", "6", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("-1", "-1", "0", new string[] {
+        [NUnit.Framework.TestCaseAttribute("±1", "±1", "0", new string[] {
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("3", "1,3", "1,7", new string[] {
                 "double"}, Category="double")]
@@ -196,8 +196,6 @@ this.FeatureBackground();
         [NUnit.Framework.TestCaseAttribute("0,1", "3", "-2,9", new string[] {
                 "double"}, Category="double")]
         [NUnit.Framework.TestCaseAttribute("0,03", "3", "-2,97", new string[] {
-                "double"}, Category="double")]
-        [NUnit.Framework.TestCaseAttribute("2", "2,01", "0,01", new string[] {
                 "double"}, Category="double")]
         public virtual void SubtractingTwoNumbers(string first, string second, string result, string[] exampleTags)
         {
@@ -237,7 +235,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 38
- testRunner.When(string.Format("Subtract number {0} from  {1} number", second, first), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("Subtract number {0} from  {1} number", first, second), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 39
  testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -261,9 +259,9 @@ this.FeatureBackground();
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("-6", "4", "-24", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("3", "-2", "-6", new string[] {
+        [NUnit.Framework.TestCaseAttribute("3", "±2", "-6", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("-7", "-1", "7", new string[] {
+        [NUnit.Framework.TestCaseAttribute("-7", "±1", "7", new string[] {
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("3", "1,3", "3,9", new string[] {
                 "double"}, Category="double")]
@@ -331,13 +329,11 @@ this.FeatureBackground();
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("0", "4", "0", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("5", "0", "0", new string[] {
-                "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("5", "5", "1", new string[] {
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("1", "5", "0,2", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("1", "3", "0,33333333333333", new string[] {
+        [NUnit.Framework.TestCaseAttribute("1", "3", "0,333333333333333", new string[] {
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("6", "±2", "-3", new string[] {
                 "integer"}, Category="integer")]

@@ -51,8 +51,7 @@ namespace AutoTests
             GetArrey(second);
             _mainScreen.TapOnEquals();
         }
-
-
+       
         [When(@"Multiply numbers (.*) by  number (.*)")]
         public void WhenMultiplyNumbersByNumber(string first, string second)
         {
