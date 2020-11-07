@@ -42,8 +42,9 @@ D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\res\mipmap-xxhdpi\ic_l
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\res\mipmap-xxxhdpi\ic_launcher.png
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\res\mipmap-xxxhdpi\ic_launcher_foreground.png
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\res\mipmap-xxxhdpi\ic_launcher_round.png
-D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\res\drawable\button2width.xml
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\res\drawable\orange.xml
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\res\drawable\mybutton.xml
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\res\drawable\lightgrey.xml
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\uploadflags.txt
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\resolvedassemblies.hash
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\link.flag
@@ -164,4 +165,3 @@ D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\stamp\_ConvertResource
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\stamp\_GenerateJavaStubs.stamp
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\stamp\_ResolveLibraryProjectImports.stamp
-D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Release\90\Calculator.csprojAssemblyReference.cache

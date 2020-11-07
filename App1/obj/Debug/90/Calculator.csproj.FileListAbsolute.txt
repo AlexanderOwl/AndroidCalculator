@@ -43,7 +43,6 @@ D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res\mipmap-xxhdpi\ic_lau
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res\mipmap-xxxhdpi\ic_launcher.png
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res\mipmap-xxxhdpi\ic_launcher_foreground.png
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res\mipmap-xxxhdpi\ic_launcher_round.png
-D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res\drawable\button2width.xml
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res\drawable\mybutton.xml
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\uploadflags.txt
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\resolvedassemblies.hash
@@ -249,3 +248,5 @@ D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\stamp\_ConvertResourcesC
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res\drawable\orange.xml
+D:\Proga\Courses\AndroidCalculator_v3\App1\obj\Debug\90\res\drawable\lightgrey.xml

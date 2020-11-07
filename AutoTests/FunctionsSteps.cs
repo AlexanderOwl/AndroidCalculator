@@ -20,9 +20,9 @@ namespace AutoTests
         [When(@"the two numbers  (.*) and (.*) are added")]
         public void WhenTheTwoNumbersAndAreAdded(string first, string second)
         {
-            GetArrey(first);
+            TapButtons(first);
             _mainScreen.TapOnPlus();
-            GetArrey(second);
+            TapButtons(second);
             _mainScreen.TapOnEquals();
         }
 
@@ -37,30 +37,65 @@ namespace AutoTests
         [When(@"Subtract number (.*) from  (.*) number")]
         public void WhenSubtractNumberFromNumber(string first, string second)
         {
-            GetArrey(first);
+            TapButtons(first);
             _mainScreen.TapOnMinus();
-            GetArrey(second);
+            TapButtons(second);
             _mainScreen.TapOnEquals();
         }
 
         [When(@"Divide number (.*) by  number (.*)")]
         public void WhenDivideNumberByNumber(string first, string second)
         {
-            GetArrey(first);
+            TapButtons(first);
             _mainScreen.TapOnDivide();
-            GetArrey(second);
-            _mainScreen.TapOnEquals();
-        }
-       
-        [When(@"Multiply numbers (.*) by  number (.*)")]
-        public void WhenMultiplyNumbersByNumber(string first, string second)
-        {
-            GetArrey(first);
-            _mainScreen.TapOnMultiply();
-            GetArrey(second);
+            TapButtons(second);
             _mainScreen.TapOnEquals();
         }
 
+        [When(@"Multiply numbers (.*) by  number (.*)")]
+        public void WhenMultiplyNumbersByNumber(string first, string second)
+        {
+            TapButtons(first);
+            _mainScreen.TapOnMultiply();
+            TapButtons(second);
+            _mainScreen.TapOnEquals();
+        }
+
+        [Given(@"input (.*)")]
+        public void GivenInputNumberIs(string input)
+        {
+            TapButtons(input);
+        }
+
+        [Then(@"last sing in result field (.*)")]
+        public void ThenLastSingInResultField(string expResult)
+        {
+            Assert.IsTrue(_mainScreen.GetTextFromField().EndsWith(expResult));
+        }
+
+        [When(@"tap button AC")]
+        public void WhenClickButtonDEL()
+        {
+            _mainScreen.TapOnDelete();
+        }
+
+        [Then(@"check that input field is empty")]
+        public void ThenCheckThatInputFieldIsEmpty()
+        {
+            Assert.AreEqual("0", _mainScreen.GetTextFromField());
+        }
+
+        [When(@"choose the sign of the operation multiply")]
+        public void WhenChooseTheSignOfTheOperationMultiply()
+        {
+            _mainScreen.TapOnMultiply();
+        }
+
+        [When(@"calculate result")]
+        public void WhenCalculateResult()
+        {
+            _mainScreen.TapOnEquals();
+        }
 
 
         public void ClickToNumber(char chars)
@@ -102,13 +137,13 @@ namespace AutoTests
                     _mainScreen.TapOnComma();
                     break;
                 case '-':
-                    _mainScreen.TapOnMinus();//
+                    _mainScreen.TapOnMinus();
                     break;
                 case '+':
                     _mainScreen.TapOnPlus();
                     break;
                 case '×':
-                    _mainScreen.TapOnMultiply();//
+                    _mainScreen.TapOnMultiply();
                     break;
                 case '÷':
                     _mainScreen.TapOnDivide();
@@ -122,7 +157,7 @@ namespace AutoTests
             }
         }
 
-        public void GetArrey(string number)
+        public void TapButtons(string number)
         {
             char[] chars = number.ToCharArray();
             for (int i = 0; i < chars.Length; i++)

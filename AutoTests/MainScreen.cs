@@ -7,7 +7,7 @@ namespace AutoTests
     public class MainScreen
     {
         public Query textField = x => x.Id("input");
-        public Query btnDelete = x => x.Marked("DEL");
+        public Query btnDelete = x => x.Marked("AC");
         public Query btnZero = x => x.Marked("0");
         public Query btnOne = x => x.Marked("1");
         public Query btnTwo = x => x.Marked("2");

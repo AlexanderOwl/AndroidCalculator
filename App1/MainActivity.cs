@@ -22,11 +22,11 @@ namespace Calculator
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-            calcText = FindViewById<TextView>(Resource.Id.input);            
+            calcText = FindViewById<TextView>(Resource.Id.input);
             numbers[0] = "0";
 
         }
-       
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -40,10 +40,13 @@ namespace Calculator
             Button button = (Button)view;
             if ("0123456789".Contains(button.Text))
                 AddButtonValues(button.Text);
-            else if(",".Contains(button.Text))
+            else if (",".Contains(button.Text))
             {
-                
-               AddButtonValues(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0].ToString());
+                if (@operator != null && numbers[1] == null)
+                {
+                    return;
+                }
+                AddButtonValues(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator[0].ToString());
             }
             else if ("×÷+-".Contains(button.Text))
             {
@@ -51,7 +54,7 @@ namespace Calculator
             }
             else if ("±".Contains(button.Text))
             {
-                Calculate();                
+                Calculate();
                 numbers[0] = (double.Parse(numbers[0]) * -1).ToString();
                 UpdateCalculatorText();
             }
@@ -59,7 +62,7 @@ namespace Calculator
             {
                 if (numbers[1] == null)
                 {
-                    numbers[0] = (double.Parse(numbers[0]) /100).ToString();
+                    numbers[0] = (double.Parse(numbers[0]) / 100).ToString();
                     UpdateCalculatorText();
                 }
                 else if (numbers[1] != null)
@@ -67,7 +70,7 @@ namespace Calculator
                     numbers[1] = (double.Parse(numbers[1]) / 100 * double.Parse(numbers[0])).ToString();
                     Calculate();
                 }
-            }           
+            }
             else if ("=" == button.Text)
             {
                 Calculate();
@@ -80,7 +83,7 @@ namespace Calculator
         {
             numbers[0] = "0";
             numbers[1] = null;
-            @operator = null;            
+            @operator = null;
             UpdateCalculatorText();
         }
 
@@ -112,7 +115,7 @@ namespace Calculator
                         result = first / second;
 
                         break;
-                    }                             
+                    }
             }
             if (result != null)
             {
@@ -138,13 +141,13 @@ namespace Calculator
         {
 
             int index = @operator == null ? 0 : 1;
-           
+
             if (value == separator.ToString() && numbers[index].Contains(separator))
                 return;
 
             numbers[index] += value;
 
-            if ((numbers[0].StartsWith("0")) && (numbers[0].Length > 1) && numbers[0][1]!= separator) numbers[0] = numbers[0].Substring(1);
+            if ((numbers[0].StartsWith("0")) && (numbers[0].Length > 1) && numbers[0][1] != separator) numbers[0] = numbers[0].Substring(1);
             UpdateCalculatorText();
         }
 
